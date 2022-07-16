@@ -7,7 +7,17 @@
     <title>Exercise 1</title>
 </head>
 <body>
+
+    <h1>1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFunción("Hola Mundo") devolverá 10</h1>
     <script>
+        let texto="";
+
+        const cadena = (texto)=>
+        (!texto)
+        ? console.warn("No has ingresado un texto")
+        : console.log(`La palabra "${texto}" tiene ${texto.length} caracteres`);
+
+        cadena("Hola Mundo");
         
     </script>
 </body>

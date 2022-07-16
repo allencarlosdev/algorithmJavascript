@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4</title>
+</head>
+<body>
+    <h1>Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo</h1>
+
+    <script>
+        let cadena="";
+        let repeticiones = undefined;
+        const repetirCadena = (cadena, repeticiones)=> {
+            if(!cadena){
+                console.warn("No has ingresado ninguna cadena de texto");
+            }else if (repeticiones === undefined){
+                console.warn("No has ingresado ningun numero de repeticion");
+            }else if (repeticiones === 0){
+                console.error("El numero de repeticiones no puede ser 0");
+            }else if(Math.sign(repeticiones) === -1){
+                console.warn("El numero de repeticiones no puede ser negativo");
+            }else {
+                for (let i = 1; i<= repeticiones; i++){
+                    console.log(`${cadena}, ${i}`);
+                }
+            }
+        }
+
+        repetirCadena('Hola Mundo', 0);
+    </script>
+</body>
+</html>

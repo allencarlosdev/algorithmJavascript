@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 5</title>
+</head>
+<body>
+    <h1>5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH"</h1>
+    <script>
+        let texto="";
+        const textoInvertido = (texto)=>{
+            if(!texto){
+                console.warn("No has ingresado ningun texto");
+            }else{
+                console.log(texto.split("").reverse().join(""));
+            }
+        }
+
+        textoInvertido("Hola Mundo");
+    </script>
+</body>
+</html>

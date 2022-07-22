@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10</title>
+</head>
+<body>
+    <h1>10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true</h1>
+    <script>
+        let numero ="";
+
+        const capicua = (numero) => {
+            if(!numero){
+                console.warn("No has ingresado ningun numero");
+            }else if(typeof numero !== "number"){
+                console.error("El valor ingresado no es un numero");
+            }else{
+                numero = numero.toString();
+                let alReves = numero.split("").reverse().join("")
+
+                if(numero !== alReves){
+                    console.log(`El "${numero}" no es capicua, al reves es ${alReves}`);
+                }else{
+                    console.log(`El "${numero}" si es capicua, al reves es ${alReves}`);
+                }
+            }
+        }
+
+        capicua(2002);
+    </script>
+</body>
+</html>

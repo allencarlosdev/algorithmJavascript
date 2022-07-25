@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 12</title>
+</head>
+<body>
+    <h1>12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true</h1>
+    <script>
+        let numero= undefined;
+
+        const numeroPrimero = (numero) => {
+            if(numero === undefined){
+                console.warn("No has ingresado ningun numero");
+            }else if(typeof numero !== "number"){
+                console.error("El valor ingresado debe ser un numero");
+            }else if(numero === 0){
+                console.error('El valor ingresado no puede ser "0"');
+            }else if(numero === 1){
+                console.error('El valor ingresado no puede ser "1"');
+            }else if(Math.sign(numero)  === -1){
+                console.error("El valor ingresado no puede ser negativo");
+            }else{
+                let divisible = false;
+                for(let i = 2; i < numero; i++){
+                    if((numero % i) === 0){
+                        divisible = true;
+                        break;
+                    }
+                }
+
+                return (divisible)
+                ? console.log(`El numero ${numero}, No es primo`)
+                : console.log(`El numero ${numero}, Si es primo`);
+            }
+        }
+
+        numeroPrimero(7);
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11</title>
+</head>
+<body>
+    <h1>11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120</h1>
+    <script>
+        let numero = undefined;
+        const factorial= (numero) =>{
+            if(numero === undefined){
+                console.warn("No has ingresado ningun numero");
+            }else if(typeof numero !== "number"){
+                console.error("El valor ingresado debe ser un numero");
+            }else if(numero === 0){
+                console.error('El valor ingresado no puede ser "0"');
+            }else if(Math.sign(numero)  === -1){
+                console.error("El valor ingresado no puede ser negativo");
+            }else{
+                let factorial =1;
+                for(let i = numero; i > 1; i--){
+                    factorial *= i;
+                }
+
+                return console.log(`El factorial de ${numero} es ${factorial}`);
+            }
+        }
+
+        factorial(5);
+    </script>
+</body>
+</html>

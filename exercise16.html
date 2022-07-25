@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 16</title>
+</head>
+<body>
+    <h1>16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800</h1>
+    <script>
+        let monto = undefined;
+        let descuento = 0;
+
+        const aplicarDescuento = (monto, descuento) => {
+            if(monto === undefined){
+                console.warn("No ingresaste el monto");
+            }else if(typeof monto !== "number"){
+                console.error("El monto ingresado no es un numero");
+            }else if(monto === 0){
+                console.error('El monto no puede ser "0"');
+            }else if(Math.sign(monto) === -1){
+                console.error("El monto no puede ser negativo");
+            }else if(typeof descuento !== "number"){
+                console.error("El valor del descuento debe ser un numero");
+            }else if(Math.sign(descuento) === -1){
+                console.error("El descuento no puede ser negativo");
+            }else{
+                console.log(`${monto} - ${descuento}% = ${monto - ((monto * descuento)/100)}`);
+            }
+        }
+
+        aplicarDescuento(1000, 20);
+    </script>
+</body>
+</html>

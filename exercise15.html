@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 15</title>
+</head>
+<body>
+    <h1>15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10</h1>
+    <script>
+        let numero = undefined;
+        let base = undefined;
+        const convertirBinarioDecimal = (numero, base) =>{
+            if(numero === undefined){
+                console.warn("No has ingresado un numero");
+            }else if(base === undefined){
+                console.warn("No has ingresado una base a convertir");
+            }else if(typeof base !== "number"){
+                console.error(`El valor "${base}" ingresado, No es un numero`);
+            }else if(base === 2){
+                console.log(`${numero} base ${base} = ${parseInt(numero, base)} base 10`);
+            }else if(base === 10){
+                console.log(`${numero} base ${base} = ${(numero.toString(base))} base 2`);
+            }else{
+                console.error("El tipo de base a convertir no es valido");
+            }
+
+            }
+
+            convertirBinarioDecimal(100,2);
+    </script>
+</body>
+</html>

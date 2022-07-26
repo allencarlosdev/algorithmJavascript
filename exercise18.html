@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 18</title>
+</head>
+<body>
+    <h1>18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5</h1>
+    <script>
+        let cadena = undefined;
+
+        const contarLetras = (cadena) => {
+            if(!cadena){
+                console.warn("No has ingresado una cadena de texto");
+            }else if(typeof cadena !== "string"){
+                console.warn("El valor ingresado no es una cadena de texto");
+            }else{
+                let vocales= 0;
+                let consonantes = 0;
+
+                for(let letra of cadena){
+                    if(/[AEIOUÁÉÍÓÚÜaeiouáéíóúü]/.test(letra)){
+                        vocales++;
+                    }
+
+                    if(/[BCDFGHJKLMNÑPQRSTVWXYZbcdfghjklmnñpqrstvwxyz]/.test(letra)){
+                        consonantes++;
+                    }
+                }
+
+                console.log(`${cadena}, Vocales: ${vocales}, consonantes: ${consonantes}`);
+            }
+        }
+
+        contarLetras("Hola Mundo");
+    </script>
+</body>
+</html>

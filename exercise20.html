@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 20</title>
+</head>
+<body>
+    <h1>20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero </h1>
+    <script>
+        let email="";
+
+        const validarEmail = (email) => {
+            if(!email){
+                console.warn("No ingresaste un email");
+            }else if(typeof email !==  "string"){
+                console.error("El valor ingresado No es una cadena de texto");
+            }else{
+                let expReg = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i
+                .test(email);
+
+                return (expReg)
+                ? console.log(`"${email}", es un email valido`)
+                : console.log(`"${email}" No es un email valido`);
+            }
+        }
+        validarEmail("allencarlosdev@gmail.com");
+    </script>
+</body>
+</html>

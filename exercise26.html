@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 26</title>
+</head>
+<body>
+    <h1>26) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true]</h1>
+    <script>
+        let arr = undefined;
+        const quitarDuplicados = (arr) => {
+            if(arr === undefined) return console.warn("No ingresaste un arreglo de numeros");
+            if(!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo");
+            if(arr.length === 0) return console.error("El arreglo esta vacio");
+            if(arr.length === 1) return console.error("El arreglo debe tener al menos 2 elementos");
+
+            return console.log({
+                original: arr,
+                sinDuplicados: arr.filter((value, index, self) =>self.indexOf(value) === index)
+            });
+        }
+
+        quitarDuplicados(["x", 10, "x", 2, "10", 10, true, true]);
+    </script>
+</body>
+</html>

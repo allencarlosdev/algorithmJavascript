@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 29</title>
+</head>
+<body>
+    PREGUNTA: Escribe una función, ingresa n, y encuentra el enésimo término de la secuencia de Fibonacci
+    <script>
+        function fibonacci(n){
+            const arrayFib = [0,1];
+            for (let i = 2; i <= n; i++) {
+                arrayFib.push(arrayFib[i - 1] + arrayFib[i - 2])
+                //arrayFib[i] = arrayFib[i - 1] + arrayFib[i - 2]
+            }
+            return arrayFib[n];
+        }
+
+        const result = fibonacci(10);
+        console.log(result);
+    </script>
+</body>
+</html>

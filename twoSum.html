@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <p>Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+        You may assume that each input would have exactly one solution, and you may not use the same element twice.
+        
+        You can return the answer in any order. <br>
+        Case 1: $nums = [2,7,11,15]; $target= 9; <br>
+        Case 2: $nums = [3,2,4]; $target= 6; <br>
+        Case 3: $nums = [3,3]; $target= 6; <br></p>
+
+    <script>
+    var twoSum = function(nums, target) {
+        let answer = [];
+        nums.forEach((num, key)=>{
+            let diff =(target - num);
+            let key2 = nums.indexOf(diff);
+            if ((key2 !== -1) && (key2 !== key) && (!answer.length)) {
+                answer.push(key,key2);
+            }
+        });
+        
+        return(answer.sort());
+    };
+    let nums = [3,3];
+    let target= 6;
+    twoSum(nums, target);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+<p>Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.</p>
+<br>
+<script>
+    var romanToInt = function(s) {
+    const ROMANS = {
+            "I" : 1,
+            "V" : 5,
+            "X" : 10,
+            "L" : 50,
+            "C" : 100,
+            "D" : 500,
+            "M" : 1000,
+        };
+
+        let result = 0;    
+        for (i = 0; i < s.length; i++) {
+  
+            if (ROMANS[s[i]] < ROMANS[s[i + 1]]) {
+                 result += ROMANS[s[i + 1]] - ROMANS[s[i]];
+                i++;
+            }
+            else {
+                 result += ROMANS[s[i]];   
+            }
+        }
+        
+        return(result);
+};
+
+    let s = "XIV";
+    romanToInt(s);
+</script>
+</body>
+</html>

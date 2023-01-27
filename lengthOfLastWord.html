@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+<p>Given a string s consisting of words and spaces, return the length of the last word in the string.
+
+A word is a maximal 
+substring
+ consisting of non-space characters only.<br><br></p>
+<br>
+<script>
+var lengthOfLastWord = function(s) {
+    let  deleteSpace= s.trim();
+    let words = deleteSpace.split(" ");
+    let countWords = words.length - 1;
+    return words[countWords].length;
+
+};
+let s="   fly me   to   the   moon  ";
+lengthOfLastWord(s);
+</script>
+</body>
+</html>

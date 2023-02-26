@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+<p>You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+
+Increment the large integer by one and return the resulting array of digits.<br><br></p>
+<br>
+<script>
+var plusOne = function(digits) {
+    let last = digits.pop()
+    if (last !== 9) {
+        let sumOne = last + 1
+        digits.push(sumOne)
+    } else {
+        digits = plusOne(digits); // repeat the function with the new value in let digits
+        digits.push(0)
+    }
+
+    console.log(digits);
+    return digits
+};
+let digits= [1,2,9,9];
+plusOne(digits);
+</script>
+</body>
+</html>

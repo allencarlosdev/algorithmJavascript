@@ -13,6 +13,9 @@ Increment the large integer by one and return the resulting array of digits.<br>
 <br>
 <script>
 var plusOne = function(digits) {
+    if (digits.length === 0) {
+        digits.push(0)
+    }
     let last = digits.pop()
     if (last !== 9) {
         let sumOne = last + 1
